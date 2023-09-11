@@ -7,3 +7,6 @@ SELECT titulo FROM livros WHERE autor_id = (SELECT id_autor FROM autores WHERE n
 SELECT nome_aluno FROM alunos WHERE curso = 'Engenharia de Software';
 
 SELECT produto, SUM(receita) AS receita_total FROM transacoes GROUP BY produto;
+
+SELECT nome_autor, COUNT(*) AS total_de_livros FROM livros GROUP BY autor_id;
+
