@@ -1,3 +1,5 @@
 SELECT titulo FROM livros;
 
 SELECT nome_autor FROM autores WHERE ano_nascimento < 1900;
+
+SELECT titulo FROM livros WHERE autor_id = (SELECT id_autor FROM autores WHERE nome_autor = 'J.K. Rowling');
