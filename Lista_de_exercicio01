@@ -46,3 +46,8 @@ SELECT produto FROM transacoes
 GROUP BY produto
 ORDER BY SUM(receita) ASC
 LIMIT 1;
+
+SELECT autores.nome_autor, SUM(20 * livros_vendidos.quantidade) AS receita_total FROM autores
+INNER JOIN livros ON autores.id_autor = livros.autor_id
+INNER JOIN livros_vendidos ON livros.id_livro = livros_vendidos.livro_id
+GROUP BY autores.nome_autor;
