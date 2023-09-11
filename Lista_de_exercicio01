@@ -14,3 +14,5 @@ SELECT curso, COUNT(*) AS total_de_alunos FROM alunos GROUP BY curso;
 
 SELECT produto, AVG(receita) AS media_de_receita FROM transacoes GROUP BY produto;
 
+SELECT produto FROM transacoes GROUP BY produto HAVING SUM(receita) > 10000;
+
