@@ -16,3 +16,7 @@ SELECT produto, AVG(receita) AS media_de_receita FROM transacoes GROUP BY produt
 
 SELECT produto FROM transacoes GROUP BY produto HAVING SUM(receita) > 10000;
 
+SELECT nome_autor FROM autores
+INNER JOIN livros ON autores.id_autor = livros.autor_id
+GROUP BY nome_autor HAVING COUNT(*) > 2;
+
