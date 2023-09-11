@@ -51,3 +51,7 @@ SELECT autores.nome_autor, SUM(20 * livros_vendidos.quantidade) AS receita_total
 INNER JOIN livros ON autores.id_autor = livros.autor_id
 INNER JOIN livros_vendidos ON livros.id_livro = livros_vendidos.livro_id
 GROUP BY autores.nome_autor;
+
+SELECT alunos.nome_aluno, COUNT(*) AS total_de_matriculas FROM alunos
+LEFT JOIN matriculas ON alunos.id_aluno = matriculas.aluno_id
+GROUP BY alunos.nome_aluno;
