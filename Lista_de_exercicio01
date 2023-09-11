@@ -41,3 +41,8 @@ INNER JOIN livros ON autores.id_autor = livros.autor_id
 GROUP BY nome_autor
 ORDER BY COUNT(*) DESC
 LIMIT 1;
+SELECT nome_autor FROM autores
+INNER JOIN livros ON autores.id_autor = livros.autor_id
+GROUP BY nome_autor
+ORDER BY COUNT(*) DESC
+LIMIT 1;
