@@ -10,3 +10,5 @@ SELECT produto, SUM(receita) AS receita_total FROM transacoes GROUP BY produto;
 
 SELECT nome_autor, COUNT(*) AS total_de_livros FROM livros GROUP BY autor_id;
 
+SELECT curso, COUNT(*) AS total_de_alunos FROM alunos GROUP BY curso;
+
