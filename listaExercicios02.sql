@@ -105,3 +105,11 @@ AS
 BEGIN
     SELECT * FROM Livros WHERE Categoria = @Categoria;
 END
+
+CREATE PROCEDURE sp_LivrosESeusAutores
+AS
+BEGIN
+    SELECT Livros.Titulo, Autores.Nome, Autores.Sobrenome
+    FROM Livros
+    INNER JOIN Autores ON Livros.AutorID = Autores.ID;
+END
