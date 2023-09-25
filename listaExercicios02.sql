@@ -19,3 +19,5 @@ AS
 BEGIN
     SELECT COUNT(*) AS 'Total' FROM Livros WHERE Categoria = @Categoria;
 END
+EXEC sp_ContarLivrosPorCategoria 'Romance';
+
