@@ -40,3 +40,20 @@ BEGIN
 END
 EXEC sp_LivrosAteAno 2000;
 
+CREATE PROCEDURE sp_TitulosPorCategoria
+@Categoria VARCHAR(255)
+AS
+BEGIN
+    DECLARE @Titulo VARCHAR(255);
+    DECLARE cur CURSOR FOR
+        SELECT Titulo FROM Livros WHERE Categoria = @Categoria;
+    OPEN cur;
+    FETCH NEXT FROM cur INTO @Titulo;
+    WHILE @@FETCH_STATUS = 0
+    BEGIN
+        PRINT @Titulo;
+        FETCH NEXT FROM cur INTO @Titulo;
+    END
+    CLOSE cur;
+    DEALLOCATE cur;
+END
