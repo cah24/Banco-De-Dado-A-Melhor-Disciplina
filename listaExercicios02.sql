@@ -3,3 +3,5 @@ AS
 BEGIN
     SELECT * FROM Autores;
 END
+EXEC sp_ListarAutores;
+
