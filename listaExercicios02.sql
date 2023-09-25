@@ -84,3 +84,10 @@ BEGIN
     ORDER BY DataNascimento;
 END
 EXEC sp_AutorMaisAntigo;
+
+CREATE PROCEDURE sp_LivrosPorCategoria
+@Categoria VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Livros WHERE Categoria = @Categoria;
+END
