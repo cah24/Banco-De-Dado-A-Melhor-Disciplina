@@ -85,6 +85,20 @@ BEGIN
 END
 EXEC sp_AutorMaisAntigo;
 
+/*
+Nome da Stored Procedure: sp_LivrosPorCategoria
+
+Esta stored procedure aceita o nome de uma categoria como parâmetro e retorna todos os livros que pertencem a categoria.
+
+Parâmetros:
+- @Categoria (VARCHAR): O nome da categoria pela qual os livros devem ser filtrados.
+
+Exemplo de Uso:
+EXEC sp_LivrosPorCategoria 'Ficção Científica';
+
+Retorno:
+A procedure retorna um conjunto de resultados com os livros que pertencem à categoria especificada.
+*/
 CREATE PROCEDURE sp_LivrosPorCategoria
 @Categoria VARCHAR(255)
 AS
