@@ -38,5 +38,5 @@ AS
 BEGIN
     SELECT * FROM Livros WHERE AnoPublicacao <= @AnoPublicacao;
 END
-
+EXEC sp_LivrosAteAno 2000;
 
