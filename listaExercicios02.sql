@@ -113,3 +113,8 @@ BEGIN
     FROM Livros
     INNER JOIN Autores ON Livros.AutorID = Autores.ID;
 END
+EXEC sp_LivrosESeusAutores;
+
+
+
+
