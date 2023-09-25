@@ -30,5 +30,6 @@ BEGIN
     ELSE
         PRINT 'Categoria não possui livros.';
 END
+EXEC sp_VerificarLivrosCategoria 'Ficção Científica';
 
 
