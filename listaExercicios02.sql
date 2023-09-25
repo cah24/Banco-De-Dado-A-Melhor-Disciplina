@@ -11,4 +11,6 @@ AS
 BEGIN
     SELECT * FROM Livros WHERE Categoria = @Categoria;
 END
+EXEC sp_LivrosPorCategoria 'Aventura';
+
 
