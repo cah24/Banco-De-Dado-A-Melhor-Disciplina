@@ -32,4 +32,11 @@ BEGIN
 END
 EXEC sp_VerificarLivrosCategoria 'Ficção Científica';
 
+CREATE PROCEDURE sp_LivrosAteAno
+@AnoPublicacao INT
+AS
+BEGIN
+    SELECT * FROM Livros WHERE AnoPublicacao <= @AnoPublicacao;
+END
+
 
