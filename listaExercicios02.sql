@@ -57,3 +57,5 @@ BEGIN
     CLOSE cur;
     DEALLOCATE cur;
 END
+
+EXEC sp_TitulosPorCategoria 'Suspense';
