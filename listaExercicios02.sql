@@ -74,3 +74,4 @@ BEGIN
         PRINT 'Erro ao adicionar o livro. Verifique se o título já existe.';
     END CATCH
 END
+EXEC sp_AdicionarLivro 'Novo Livro', 3, 2022;
