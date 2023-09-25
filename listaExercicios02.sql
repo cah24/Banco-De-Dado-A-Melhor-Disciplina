@@ -83,3 +83,4 @@ BEGIN
     FROM Autores
     ORDER BY DataNascimento;
 END
+EXEC sp_AutorMaisAntigo;
