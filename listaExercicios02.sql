@@ -21,3 +21,14 @@ BEGIN
 END
 EXEC sp_ContarLivrosPorCategoria 'Romance';
 
+CREATE PROCEDURE sp_VerificarLivrosCategoria
+@Categoria VARCHAR(255)
+AS
+BEGIN
+    IF EXISTS (SELECT 1 FROM Livros WHERE Categoria = @Categoria)
+        PRINT 'Categoria possui livros.';
+    ELSE
+        PRINT 'Categoria não possui livros.';
+END
+
+
