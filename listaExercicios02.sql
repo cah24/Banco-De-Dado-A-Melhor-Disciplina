@@ -5,3 +5,10 @@ BEGIN
 END
 EXEC sp_ListarAutores;
 
+CREATE PROCEDURE sp_LivrosPorCategoria
+@Categoria VARCHAR(255)
+AS
+BEGIN
+    SELECT * FROM Livros WHERE Categoria = @Categoria;
+END
+
