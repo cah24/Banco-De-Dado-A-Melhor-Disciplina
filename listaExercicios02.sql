@@ -57,5 +57,20 @@ BEGIN
     CLOSE cur;
     DEALLOCATE cur;
 END
-
 EXEC sp_TitulosPorCategoria 'Suspense';
+
+CREATE PROCEDURE sp_AdicionarLivro
+@Titulo VARCHAR(255),
+@AutorID INT,
+@AnoPublicacao INT
+AS
+BEGIN
+    BEGIN TRY
+        INSERT INTO Livros (Titulo, AutorID, AnoPublicacao)
+        VALUES (@Titulo, @AutorID, @AnoPublicacao);
+        PRINT 'Livro adicionado com sucesso.';
+    END TRY
+    BEGIN CATCH
+        PRINT 'Erro ao adicionar o livro. Verifique se o título já existe.';
+    END CATCH
+END
