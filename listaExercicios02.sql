@@ -75,3 +75,11 @@ BEGIN
     END CATCH
 END
 EXEC sp_AdicionarLivro 'Novo Livro', 3, 2022;
+
+CREATE PROCEDURE sp_AutorMaisAntigo
+AS
+BEGIN
+    SELECT TOP 1 Nome, Sobrenome
+    FROM Autores
+    ORDER BY DataNascimento;
+END
