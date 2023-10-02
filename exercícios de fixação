@@ -81,6 +81,9 @@ SELECT produto, preco FROM produtos WHERE preco = (SELECT MAX(preco) FROM produt
 
 SELECT produto, preco FROM produtos WHERE preco = (SELECT MIN(preco) FROM produtos);
 
+SELECT SUM(IF(quantidade > 0, preco * quantidade, 0)) AS soma_total_estoque FROM produtos;
+
+
 
 
 
