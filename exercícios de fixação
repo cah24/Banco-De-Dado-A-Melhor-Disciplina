@@ -83,6 +83,23 @@ SELECT produto, preco FROM produtos WHERE preco = (SELECT MIN(preco) FROM produt
 
 SELECT SUM(IF(quantidade > 0, preco * quantidade, 0)) AS soma_total_estoque FROM produtos;
 
+DELIMITER //
+
+CREATE FUNCTION CALC_FATORIAL(n INT)
+RETURNS INT
+BEGIN
+    DECLARE resultado INT DEFAULT 1;
+    DECLARE i INT DEFAULT 1;
+    WHILE i <= n DO
+        SET resultado = resultado * i;
+        SET i = i + 1;
+    END WHILE;
+    RETURN resultado;
+END //
+
+DELIMITER ;
+
+
 
 
 
