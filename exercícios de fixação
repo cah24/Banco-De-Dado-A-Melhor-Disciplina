@@ -73,6 +73,9 @@ END //
 
 DELIMITER ;
 
+SELECT produto, quantidade, TOTAL_VALOR(preco, quantidade) AS valor_total FROM produtos;
+
+
 
 
 
