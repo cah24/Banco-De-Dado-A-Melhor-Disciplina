@@ -77,6 +77,9 @@ SELECT produto, quantidade, TOTAL_VALOR(preco, quantidade) AS valor_total FROM p
 
 SELECT COUNT(*) AS total_produtos FROM produtos;
 
+SELECT produto, preco FROM produtos WHERE preco = (SELECT MAX(preco) FROM produtos);
+
+
 
 
 
