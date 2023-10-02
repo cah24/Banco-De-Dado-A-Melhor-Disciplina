@@ -99,6 +99,23 @@ END //
 
 DELIMITER ;
 
+DELIMITER //
+
+CREATE FUNCTION CALC_EXPONENCIAL(base INT, expoente INT)
+RETURNS INT
+BEGIN
+    DECLARE resultado INT DEFAULT 1;
+    DECLARE i INT DEFAULT 1;
+    WHILE i <= expoente DO
+        SET resultado = resultado * base;
+        SET i = i + 1;
+    END WHILE;
+    RETURN resultado;
+END //
+
+DELIMITER ;
+
+
 
 
 
