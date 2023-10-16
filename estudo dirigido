@@ -1,0 +1,5 @@
+SELECT Livros.Titulo, Autores.PrimeiroNome, Autores.UltimoNome, Gêneros.Nome
+FROM Livros
+JOIN Livro_Autor ON Livros.LivroID = Livro_Autor.LivroID
+JOIN Autores ON Livro_Autor.AutorID = Autores.AutorID
+JOIN Gêneros ON Livros.GeneroID = Gêneros.GeneroID;
